@@ -52,16 +52,12 @@ The program expects a main folder containing one subfolder per experimental day:
 
 If selected, the user can import a Python .py or MATLAB .m file containing a list/array of values such as:
 
-    ```bash
-        # example_values.py
-        values = [10, 20, 30, 40, 50]
-        ```
+    # example_values.py
+    values = [10, 20, 30, 40, 50]
 or
 
-    ``` bash
-        % example_values.m
-        values = [10, 20, 30, 40, 50];
-        ```
+     % example_values.m
+     values = [10, 20, 30, 40, 50];
 
 These values will be used to generate a secondary plot:
 mouse weight vs. file values.
@@ -70,21 +66,24 @@ mouse weight vs. file values.
 
 Inside each .txt file, the software will search for the mouse’s weight based on the following conditions:
 
-Requirement	Must Appear On The Same Line
-"BW"	✔ Yes
-"%"	✔ Yes
-A number before %	✔ This number is the weight value in percentages
+! Requirement	Must Appear On The Same Line
 
-Example valid line:
+✔ "BW"
 
-BW: 25.9g, 92%
+✔ "%"
 
+✔ A number before %	 (This number is the weight value in percentages)
+
+Example valid line: BW: 25.9g, 92%
 
 Extracted value: 92
 
 Invalid examples the program will ignore:
+
 ❌ % but no BW on the line
+
 ❌ BW present but no %
+
 ❌ No number before %
 
 ## 🖥️ GUI Features
@@ -109,31 +108,33 @@ Invalid examples the program will ignore:
 Clone this repository:
 
 git clone https://github.com/yourusername/Mouse-Weight-Tracking-GUI.git
+
 cd Mouse-Weight-Tracking-GUI
 
 ### Dependencies
 
 You can install the required packages using:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 
 ### Expected dependencies:
 
-tkinter     # GUI
-matplotlib  # plotting
-numpy       # numeric handling
-os/pathlib  # filesystem navigation
+* tkinter     # GUI
+* matplotlib  # plotting
+* numpy       # numeric handling
+* os/pathlib  # filesystem navigation
 
 ### Running the Application
-python main.py
+
+    python mouse_weight_tracker.py
 
 ## 🧪 Testing
 
 Tests will be included in a /tests folder.
 Run them with:
 
-pytest
+    pytest
 
 ## 📤 Output
 
@@ -144,4 +145,5 @@ pytest
 ## 📚 Course Information
 
 This project was created as a final assignment for the Python Programming Course (2025).
+
 [Course repository link](https://github.com/Code-Maven/wis-python-course-2025-10)
