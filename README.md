@@ -22,55 +22,46 @@ This tool is designed to help students and researchers quickly visualize behavio
 
 The program expects a main folder containing one subfolder per experimental day:
 
-BaseFolder/
+    BaseFolder/
 
-    20251201/
+        20251201/
     
-        IP75_20251201_ExpDetails.txt
+            IP75_20251201_ExpDetails.txt
         
-    20251202/
+        20251202/
     
-        IP75_20251202_ExpDetails.txt
+            IP75_20251202_ExpDetails.txt
         
-    20251203/
+        20251203/
     
-        IP75_20251203_ExpDetails.txt
+            IP75_20251203_ExpDetails.txt
         
-    ...
+        ...
 
-Subfolder Rules
+### Subfolder Rules
 
-Each subfolder name must be a date in the format:
+* Each subfolder name must be a date in the format: YYYYMMDD  (YearMonthDay)
+* Example: 20251201
 
-YYYYMMDD  (YearMonthDay)
+### File Naming Rules
 
-
-Example: 20251201
-
-File Naming Rules
-
-Each folder must contain exactly one .txt file that includes the text:
-
-ExpDetails
-
-
-Example:
-
-IP75_20251201_ExpDetails.txt
+* Each folder must contain exactly one .txt file that includes the text: ExpDetails
+* Example: IP75_20251201_ExpDetails.txt
 
 ### Optional Additional Input
 
 If selected, the user can import a Python .py or MATLAB .m file containing a list/array of values such as:
 
-### example_values.py
-values = [10, 20, 30, 40, 50]
-
-
+    ```bash
+        # example_values.py
+        values = [10, 20, 30, 40, 50]
+        ```
 or
 
-% example_values.m
-values = [10, 20, 30, 40, 50];
-
+    ``` bash
+        % example_values.m
+        values = [10, 20, 30, 40, 50];
+        ```
 
 These values will be used to generate a secondary plot:
 mouse weight vs. file values.
