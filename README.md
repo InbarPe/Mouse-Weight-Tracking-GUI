@@ -1,4 +1,4 @@
-### Mouse Weight Tracking GUI
+# Mouse Weight Tracking GUI
 
 A GUI application for analyzing mouse weight in percentages over multiple experimental days. The program loads daily text files from a user-provided folder structure, extracts the animal’s weight from each file, and generates plots to visualize weight as a function of time. The tool also supports loading an external Python/MATLAB data file for comparison-based plotting.
 
@@ -23,12 +23,19 @@ This tool is designed to help students and researchers quickly visualize behavio
 The program expects a main folder containing one subfolder per experimental day:
 
 BaseFolder/
+
     20251201/
+    
         IP75_20251201_ExpDetails.txt
+        
     20251202/
+    
         IP75_20251202_ExpDetails.txt
+        
     20251203/
+    
         IP75_20251203_ExpDetails.txt
+        
     ...
 
 Subfolder Rules
@@ -51,11 +58,11 @@ Example:
 
 IP75_20251201_ExpDetails.txt
 
-# Optional Additional Input
+### Optional Additional Input
 
 If selected, the user can import a Python .py or MATLAB .m file containing a list/array of values such as:
 
-# example_values.py
+### example_values.py
 values = [10, 20, 30, 40, 50]
 
 
@@ -106,28 +113,28 @@ Invalid examples the program will ignore:
 * Option to save plots as .png
 
 ## ⚙️ Technical Details
-# Installation
+### Installation
 
 Clone this repository:
 
 git clone https://github.com/yourusername/Mouse-Weight-Tracking-GUI.git
 cd Mouse-Weight-Tracking-GUI
 
-# Dependencies
+### Dependencies
 
 You can install the required packages using:
 
 pip install -r requirements.txt
 
 
-# Expected dependencies:
+### Expected dependencies:
 
 tkinter     # GUI
 matplotlib  # plotting
 numpy       # numeric handling
 os/pathlib  # filesystem navigation
 
-# Running the Application
+### Running the Application
 python main.py
 
 ## 🧪 Testing
