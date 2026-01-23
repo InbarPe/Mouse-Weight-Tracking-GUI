@@ -74,7 +74,7 @@ Two modes are supported:
 
 Examples:
 
-    # example_values.py
+    # example_values.npy
     values = [10, 20, 30, 40, 50]
 
 
@@ -94,7 +94,7 @@ File name and format examples:
 
 And the file will look like:
 
-    # daily_value.py
+    # daily_value.npy
     value = 10
 
 
@@ -160,7 +160,7 @@ This ensures transparency and preserves data integrity.
 
 Clone this repository:
 
-git clone https://github.com/yourusername/Mouse-Weight-Tracking-GUI.git
+git clone https://github.com/InbarPr/Mouse-Weight-Tracking-GUI.git
 
 cd Mouse-Weight-Tracking-GUI
 
