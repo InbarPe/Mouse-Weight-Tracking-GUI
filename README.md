@@ -32,14 +32,21 @@ This tool is designed to help students and researchers quickly visualize behavio
 
 The program expects a main folder containing one subfolder per experimental day:
 
-BaseFolder/
-    20251201/
-        IP75_20251201_ExpDetails.txt
-    20251202/
-        IP75_20251202_ExpDetails.txt
-    20251203/
-        IP75_20251203_ExpDetails.txt
-    ...
+    BaseFolder/
+
+        20251201/
+    
+            IP75_20251201_ExpDetails.txt
+        
+        20251202/
+    
+            IP75_20251202_ExpDetails.txt
+        
+        20251203/
+    
+            IP75_20251203_ExpDetails.txt
+        
+        ...
 
 ### Subfolder Rules
 
@@ -52,14 +59,8 @@ Example: 20251201
 
 ### File Naming Rules
 
-Each folder must contain exactly one .txt file that includes the text:
-
-ExpDetails
-
-
-Example:
-
-IP75_20251201_ExpDetails.txt
+* Each folder must contain exactly one .txt file that includes the text: ExpDetails
+* Example: IP75_20251201_ExpDetails.txt
 
 ## Optional Additional Input
 
@@ -111,21 +112,24 @@ mouse weight vs. file values.
 
 Inside each .txt file, the software will search for the mouse’s weight based on the following conditions:
 
-Requirement	Must Appear On The Same Line
-"BW"	✔ Yes
-"%"	✔ Yes
-A number before %	✔ This number is the weight value in percentages
+! Requirement	Must Appear On The Same Line
 
-Example valid line:
+✔ "BW"
 
-BW: 25.9g, 92%
+✔ "%"
 
+✔ A number before %	 (This number is the weight value in percentages)
+
+Example valid line: BW: 25.9g, 92%
 
 Extracted value: 92
 
 Invalid examples the program will ignore:
+
 ❌ % but no BW on the line
+
 ❌ BW present but no %
+
 ❌ No number before %
 
 ## 📊 Statistical Analysis
@@ -157,13 +161,14 @@ This ensures transparency and preserves data integrity.
 Clone this repository:
 
 git clone https://github.com/yourusername/Mouse-Weight-Tracking-GUI.git
+
 cd Mouse-Weight-Tracking-GUI
 
 ### Dependencies
 
 You can install the required packages using:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ### Running the Application
 python main.py
@@ -185,6 +190,7 @@ pytest -v
 ## 📚 Course Information
 
 This project was created as a final assignment for the Python Programming Course (2025).
+
 [Course repository link](https://github.com/Code-Maven/wis-python-course-2025-10)
 
 ## 👤 Author
