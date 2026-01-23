@@ -160,7 +160,7 @@ This ensures transparency and preserves data integrity.
 
 Clone this repository:
 
-git clone https://github.com/InbarPr/Mouse-Weight-Tracking-GUI.git
+git clone https://github.com/InbarPe/Mouse-Weight-Tracking-GUI.git
 
 cd Mouse-Weight-Tracking-GUI
 
