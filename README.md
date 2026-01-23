@@ -1,4 +1,4 @@
-### Mouse Weight Tracking GUI
+# Mouse Weight Tracker GUI
 
 A GUI application for analyzing mouse weight in percentages over multiple experimental days. The program loads daily text files from a user-provided folder structure, extracts the animal’s weight from each file, and generates plots to visualize weight as a function of time. The tool also supports loading an external Python/MATLAB data file for comparison-based plotting.
 
@@ -12,9 +12,19 @@ This project provides an easy interface to:
 
 * Plot weight as a function of days.
 
-* (Optional) Allow the user to drag and drop a Python or MATLAB file containing n values (where n = number of days) and generate a comparison plot of weight vs. those values.
+* Allow exporting all extracted weight measurements from the selected days. Users may save the data as either a MATLAB (.mat) or a Python (.npy) file.
+
+* Allow the user to load a Python or MATLAB file containing n values (where n = number of days) and generate a comparison plot of weight vs. those values.
+
+* Scatter plot for external values with:
+  - Pearson correlation (r)
+  - p-value
+  - Optional linear regression overlay
+  - Optional outlier marking
 
 * Display the plots inside the GUI with an option to save them as .png.
+
+* Clear error handling and user-friendly pop-up messages.
 
 This tool is designed to help students and researchers quickly visualize behavioral experiment progress without manually handling files.
 
@@ -31,16 +41,16 @@ BaseFolder/
         IP75_20251203_ExpDetails.txt
     ...
 
-Subfolder Rules
+### Subfolder Rules
 
-Each subfolder name must be a date in the format:
+Each subfolder represents one experimental day and its name must be a date in the format:
 
 YYYYMMDD  (YearMonthDay)
 
 
 Example: 20251201
 
-File Naming Rules
+### File Naming Rules
 
 Each folder must contain exactly one .txt file that includes the text:
 
@@ -51,19 +61,48 @@ Example:
 
 IP75_20251201_ExpDetails.txt
 
-# Optional Additional Input
+## Optional Additional Input
 
-If selected, the user can import a Python .py or MATLAB .m file containing a list/array of values such as:
+The user may optionally plot mouse weight against an external daily variable.
+Two modes are supported:
 
-# example_values.py
-values = [10, 20, 30, 40, 50]
+### Option 1: One file with all values
+- A single file containing one value per day
+- Supported formats: `.npy`, `.mat`
+- Number of values must match the number of selected days
+
+Examples:
+
+    # example_values.py
+    values = [10, 20, 30, 40, 50]
 
 
-or
+    or
 
-% example_values.m
-values = [10, 20, 30, 40, 50];
+    % example_values.m
+    values = [10, 20, 30, 40, 50];
 
+### Option 2: One file per day
+- A file with the same name in each selected day folder
+- Each file must contain **a single numeric value**
+- Supported formats: `.npy`, `.mat`
+
+File name and format examples: 
+    - daily_value.py
+    - daily_value.m
+
+And the file will look like:
+
+    # daily_value.py
+    value = 10
+
+
+    or
+
+    % daily_value.m
+    value = 10;
+
+All values from each day that was dselected to be processed will be combined to one list for the visualiztion.
 
 These values will be used to generate a secondary plot:
 mouse weight vs. file values.
@@ -89,53 +128,53 @@ Invalid examples the program will ignore:
 ❌ BW present but no %
 ❌ No number before %
 
-## 🖥️ GUI Features
+## 📊 Statistical Analysis
 
-* Text field to enter the base experiment folder path
+When plotting weight vs external values:
 
-* Button to scan folders and create Weight vs. Days plot
+- Data is shown as a **scatter plot**
+- Pearson correlation coefficient (r) and p-value are displayed
+- Optional linear regression overlay
+- Optional outlier marking
 
-* Checkbox to enable external file loading
+### Outlier definition
 
-* Drag-and-drop input area for .py / .m files
+Outliers are identified using a **z-score–based method**:
 
-* Separate button to generate the Weight vs. Custom Values plot
+- A data point is considered an outlier if its weight or external value
+  deviates by more than a specified number of standard deviations
+  (default: 3) from the mean.
+- The outlier detection threshold is user-configurable, allowing flexible control over sensitivity depending on dataset size and   variability.
+- Outliers are **not removed**
+- They are visually marked on the plot
+- Correlation and regression are computed using inlier data only
 
-* Display plot in the application window
-
-* Option to save plots as .png
+This ensures transparency and preserves data integrity.
 
 ## ⚙️ Technical Details
-# Installation
+### Installation
 
 Clone this repository:
 
 git clone https://github.com/yourusername/Mouse-Weight-Tracking-GUI.git
 cd Mouse-Weight-Tracking-GUI
 
-# Dependencies
+### Dependencies
 
 You can install the required packages using:
 
 pip install -r requirements.txt
 
-
-# Expected dependencies:
-
-tkinter     # GUI
-matplotlib  # plotting
-numpy       # numeric handling
-os/pathlib  # filesystem navigation
-
-# Running the Application
+### Running the Application
 python main.py
 
 ## 🧪 Testing
 
-Tests will be included in a /tests folder.
+The project includes automated tests for core logic (data loading, parsing, validation).
+Tests are included in a /tests folder.
 Run them with:
 
-pytest
+pytest -v
 
 ## 📤 Output
 
@@ -147,3 +186,7 @@ pytest
 
 This project was created as a final assignment for the Python Programming Course (2025).
 [Course repository link](https://github.com/Code-Maven/wis-python-course-2025-10)
+
+## 👤 Author
+
+Inbar Perets Vadavker

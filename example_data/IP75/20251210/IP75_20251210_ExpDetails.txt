@@ -1,0 +1,18 @@
+IP75 (Training Operant)
+20251210
+
+BW: 83% 21.2g
+food restricted
+glucose (600mM)+apple juice (8%)+ethyl butyrate odor (0.002%) cue1, glucose (600mM)+grape juice (8%)+isoamyl acetate odor (0.002%) cue2 1:1
+ITI ~7sec in ML + 0-5sec in code
+Smells: cue1 - TTL1, IAA; cue2 - TTL2, EB
+AOM: 21
+PMT: 78.92%, 0.735V
+Zoom: 1.5X, 906.76x906.76um
+Frame rate: 30.0
+Fov image: avg of 30 frames
+
+Run1:
+*****
+116961 frames
+300 trials

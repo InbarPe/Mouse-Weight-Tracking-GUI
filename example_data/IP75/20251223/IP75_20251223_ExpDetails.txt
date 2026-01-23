@@ -1,0 +1,58 @@
+IP75 (IG-L)
+20251223
+
+BW: 105.5% 26.9g
+food restricted
+ITI ~10sec in ML + 20-30sec (normal)/30-40sec (surprise) in code
+Smells: cue1 - TTL1, IAA; cue2 - TTL2, EB
+AOM: 30
+PMT: 84.24%, 0.75V
+Zoom: 1.5X, 906.76x906.76um
+Frame rate: 30.0
+Fov image: avg of 30 frames
+
+Run1:
+*****
+14597 frames
+!!! Reversal by mistake
+acek (25mM)+apple juice (8%)+ethyl butyrate odor (0.002%) + IG infusion (acek 25mM) cue
+catheter wash
+pump syringe volume: ~4ml
+13 trials
+
+Run2:
+*****
+31919 frames
+acek (25mM)+grape juice (8%)+isoamyl acetate odor (0.002%) + IG infusion (acek 25mM) cue, surprise IG infusion (acek 25mM) 9:1
+50 trials
+pump syringe volume: ~3ml
+
+Run3:
+*****
+27000 frames
+
+change in x: 5
+change in y: -1
+change in z: 0
+
+Run4:
+*****
+32997 frames
+acek (25mM)+apple juice (8%)+ethyl butyrate odor (0.002%) + IG infusion (Glucose 1M + Intralipids 7.5%) cue, surprise IG infusion (Glucose 1M + Intralipids 7.5%) 9:1
+pump syringe volume: ~4ml
+catheter wash
+50 trials
+pump syringe volume: ~3ml
+
+change in x: -3.5
+change in y: 0
+change in z: 0.5
+
+Run5:
+*****
+27000 frames
+catheter wash
+
+change in x: 4
+change in y: 2.5
+change in z: 0

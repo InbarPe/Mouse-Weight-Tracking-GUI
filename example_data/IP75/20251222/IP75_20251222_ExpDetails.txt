@@ -1,0 +1,56 @@
+IP75 (IG-L)
+20251222
+
+BW: 103% 26.3g
+food restricted
+ITI ~10sec in ML + 20-30sec (normal)/30-40sec (surprise) in code
+Smells: cue1 - TTL1, IAA; cue2 - TTL2, EB
+AOM: 30.67
+PMT: 84.34%, 0.752V
+Zoom: 1.5X, 906.76x906.76um
+Frame rate: 30.0
+Fov image: avg of 30 frames
+
+Run1:
+*****
+39878 frames
+acek (25mM)+apple juice (8%)+ethyl butyrate odor (0.002%) + IG infusion (Glucose 1M + Intralipids 7.5%) cue, surprise IG infusion (Glucose 1M + Intralipids 7.5%) 9:1
+pump syringe volume: ~4ml
+catheter wash
+50 trials
+5 minutes
+pump syringe volume: ~2.8ml
+
+Run2:
+*****
+27000 frames
+
+change in x: 0
+change in y: 0
+change in z: 0
+
+Run3:
+*****
+40398 frames
+acek (25mM)+grape juice (8%)+isoamyl acetate odor (0.002%) + IG infusion (acek 25mM) cue, surprise IG infusion (acek 25mM) 9:1
+pump syringe volume: ~4.5ml
+catheter wash
+42 trials
+pump syringe volume: ~4ml
+
+! ML collapsed after 42 trials - odor was ON since then
+
+change in x: 0
+change in y: 0
+change in z: 0
+
+Run4:
+*****
+27000 frames
+catheter wash
+
+! Odor (isoamyl acetate) was ON
+
+change in x: 0
+change in y: 5
+change in z: 0
